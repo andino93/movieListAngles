@@ -1,13 +1,7 @@
 angular.module('movie-app', [])
   .component('app', {
     controller: function() {
-      this.movies = [
-        {title: 'Mean Girls', toWatch: false},
-        {title: 'Hackers', toWatch: false},
-        {title: 'The Grey', toWatch: false},
-        {title: 'Sunshine', toWatch: false},
-        {title: 'Ex Machina', toWatch: false},
-      ];
+      this.movies = window.sampleMovieData;
 
       this.currentView = this.movies;
       this.showNoMatches = false;
@@ -57,12 +51,8 @@ angular.module('movie-app', [])
         <search search-list="$ctrl.searchList"></search>
       </div>
       <div>
-        <button ng-click="$ctrl.watchListToggle(true)" class="btn">
-          <span class="glyphicon glyphicon-search">Watched</span>
-        </button>
-        <button ng-click="$ctrl.watchListToggle(false)" class="btn">
-          <span class="glyphicon glyphicon-search">To Watch</span>
-        </button>
+        <button ng-click="$ctrl.watchListToggle(true)" class="btn">Watched</button>
+        <button ng-click="$ctrl.watchListToggle(false)" class="btn">To Watch</button>
       </div>
       <div>
       <ul>
