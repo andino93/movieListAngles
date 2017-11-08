@@ -2,7 +2,6 @@ angular.module('movie-app', [])
   .component('app', {
     controller: function() {
       this.movies = window.sampleMovieData;
-
       this.currentView = this.movies;
       this.showNoMatches = false;
 

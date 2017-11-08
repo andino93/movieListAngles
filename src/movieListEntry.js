@@ -15,8 +15,8 @@ angular.module('movie-app')
           <div class="movie container">
               {{$ctrl.movie.title}}
               <button
+                ng-class="$ctrl.movie.toWatch ? 'watch click' : 'watch'"
                 ng-click="$ctrl.toggle($ctrl.movie.title)"
-                class="btn"
                 >watch
               </button>
           </div>

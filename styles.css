@@ -48,6 +48,16 @@ body {
   margin-top: 10px;
 }
 */
+
+button.watch {
+  /*background: green;
+  color: white;*/
+}
+
+button.watch.click {
+  background: green
+}
+
 .movie-list {
   background: #fff;
   padding: 8px;
